@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <title>moviedb</title>
+</head>
+<body>
+    <div class="container">
+        <div class="logo-container">
+            <img id="logo" src="https://imgs.search.brave.com/W7eFF9YVVqoSnptfHQPPigWowHtPzIOb-Kw4p_GeH8Y/rs:fit:860:0:0/g:ce/aHR0cHM6Ly93d3cu/cG5nYWxsLmNvbS93/cC1jb250ZW50L3Vw/bG9hZHMvMjAxOC8w/Ni9DaW5lbWEtUE5H/LUltYWdlLnBuZw" alt="">
+        </div>
+        <div class="title-container">
+            <h1></h1>
+        </div>
+        <div class="search-container">
+            <h2>Search for a movie</h2>
+            <form id="movieSearchForm">
+                <input type="text" id="movieNameInput" placeholder="Enter movie name">
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+    <div class="result-container">
+        <h3 id="title-head"></h3>
+        <img id="poster-image" alt="">
+    </div>
+    <script>
+        document.getElementById('movieSearchForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const movieName = document.getElementById('movieNameInput').value;
+            displayMovieInfo(movieName);
+        });
+    </script>
+</body>
+    <script src="script.js"></script>
+    <script src="config.js"></script>
+</html>
